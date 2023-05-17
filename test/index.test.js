@@ -6,16 +6,16 @@ import gendiff from '../src/index.js';
 const __filename = url.fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-const getFixturePath = (filename) => path.join(__dirname, '..', '__fixtures__', filename);
+const getFixturePath = (filename) => path.join(__dirname, '..', 'fixtures', filename);
 const readFile = (filename) => fs.readFileSync(getFixturePath(filename), 'utf-8');
 
 const file1OutputDefault = readFile('fileOutput_.txt');
 const file1OutputPlain = readFile('fileOutput_ plain.txt');
 const file1OutputJson = readFile('fileOutput_ json.txt');
-const file1 = './__fixtures__/file1.json';
-const file2 = './__fixtures__/file2.json';
-const file3 = './__fixtures__/file1.yml';
-const file4 = './__fixtures__/file2.yml';
+const file1 = './fixtures/file1.json';
+const file2 = './fixtures__/file2.json';
+const file3 = './fixtures/file1.yml';
+const file4 = './fixtures/file2.yml';
 
 describe('comparing  files', () => {
   test('simple using', () => {

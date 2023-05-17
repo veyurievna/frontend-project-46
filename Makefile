@@ -17,9 +17,9 @@ publish:
 	npm publish --dry-run
 
 run:
-	gendiff  './__fixtures__/file1.yml' './__fixtures__/file2.yml' 
+	gendiff  './fixtures/file1.yml' './fixtures/file2.yml' 
 
 run2:
-	gendiff  './__fixtures__/file1.json' './__fixtures__/file2.json' 
+	gendiff  './fixtures/file1.json' './fixtures/file2.json' 
 
 .PHONY: test
