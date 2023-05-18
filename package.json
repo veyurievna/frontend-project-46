@@ -7,7 +7,7 @@
   "description": "second project Hexlet",
   "main": "src/index.js",
   "scripts": {
-    "test": "NODE_OPTIONS=--experimental-vm-modules npx jest  --coverage"
+  "test": "NODE_OPTIONS=--experimental-vm-modules npx jest  --coverage"
   },
   "repository": {
     "type": "git",
