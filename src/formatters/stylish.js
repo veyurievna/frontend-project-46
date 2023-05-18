@@ -3,15 +3,14 @@ import _ from 'lodash';
 const spacesCount = 4;
 const replacer = ' ';
 
-const getTwoOrSixSpaces = (depth) => {
-  const indentSize = depth * spacesCount;
+const getIndentationSpaces = (depth, spaces) => {
+  const indentSize = depth * spaces;
+    if (indentSize <= spaces) {
   return replacer.repeat(indentSize - 2);
-};
-
-const getFourOrEightSpaces = (depth) => {
-  const indentSize = depth * spacesCount;
+  } else {
   return replacer.repeat(indentSize);
-};
+  }
+  };
 
 const stringify = (data, depth) => {
   if (!_.isPlainObject(data)) {
@@ -24,6 +23,8 @@ const stringify = (data, depth) => {
 };
 
 const iter = (diff, depth = 1) => diff.map((node) => {
+  const indent1 = getTwoOrSixSpaces(depth);
+  const indent2 = getFourOrEightSpaces(depth);
   switch (node.type) {
     case 'deleted':
       return `${getTwoOrSixSpaces(depth)}- ${node.key}: ${stringify(
