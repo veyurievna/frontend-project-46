@@ -23,8 +23,8 @@ const stringify = (data, depth) => {
 };
 
 const iter = (diff, depth = 1) => diff.map((node) => {
-  const indent1 = getTwoOrSixSpaces(depth);
-  const indent2 = getFourOrEightSpaces(depth);
+  const { type, name } = node;
+
   switch (node.type) {
     case 'deleted':
       return `${getTwoOrSixSpaces(depth)}- ${node.key}: ${stringify(
