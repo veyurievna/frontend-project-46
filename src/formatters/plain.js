@@ -21,7 +21,7 @@ const iter = (diff, path) => diff
   .filter((node) => node.type !== 'unchanged')
   .map((node) => {
     const currentPath = getFullPath(node, path);
-    switch (node.type) {
+    switch (type) {
       case 'added':
         return `Property '${currentPath}' was added with value: ${stringify(
           node.value,

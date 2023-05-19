@@ -26,9 +26,9 @@ describe('comparing  files', () => {
 });
 
 test.each([
-[file1, file2, file1OutputDefault],
-[file3, file4, file1OutputPlain, 'plain'],
-[file3, file4, file1OutputJson, 'json'],
+  [file1, file2, file1OutputDefault],
+  [file3, file4, file1OutputPlain, 'plain'],
+  [file3, file4, file1OutputJson, 'json'],
 ])('compares %s and %s with option %s', (filepath1, filepath2, expectedOutput, format) => {
-expect(gendiff(filepath1, filepath2, format)).toEqual(expectedOutput);
+  expect(gendiff(filepath1, filepath2, format)).toEqual(expectedOutput);
 });
