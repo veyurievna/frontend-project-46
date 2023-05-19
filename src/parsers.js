@@ -7,7 +7,7 @@ export default (data, format) => {
     case 'yml':
     case 'yaml':
       return YAML.load(data);
-      default:
+    default:
       throw new Error(`'Unknown format! ${format}'`);
   }
 };
