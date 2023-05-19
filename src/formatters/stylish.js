@@ -60,3 +60,4 @@ const formatStylish = (tree) => {
   return `{\n${result.join('\n')}\n}`;
 };
 
+export default formatStylish;
