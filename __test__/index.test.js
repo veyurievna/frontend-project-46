@@ -18,16 +18,14 @@ const file3 = './__fixtures__/file1.yml';
 const file4 = './__fixtures__/file2.yml';
 
 describe('comparing  files', () => {
-    expect(gendiff(file1, file2)).toEqual(file1OutputDefault);
-    expect(gendiff(file3, file4, 'plain')).toEqual(file1OutputPlain);
-    expect(gendiff(file3, file4, 'json')).toEqual(file1OutputJson);
+  expect(gendiff(file1, file2)).toEqual(file1OutputDefault);
+  expect(gendiff(file3, file4, 'plain')).toEqual(file1OutputPlain);
+  expect(gendiff(file3, file4, 'json')).toEqual(file1OutputJson);
   test.each([
-  [file1, file2, file1OutputDefault],
-  [file3, file4, file1OutputPlain, 'plain'],
-  [file3, file4, file1OutputJson, 'json'],
-])('compares %s and %s with option %s', (filepath1, filepath2, expectedOutput, format) => {
-  expect(gendiff(filepath1, filepath2, format)).toEqual(expectedOutput);
+    [file1, file2, file1OutputDefault],
+    [file3, file4, file1OutputPlain, 'plain'],
+    [file3, file4, file1OutputJson, 'json'],
+  ])('compares %s and %s with option %s', (filepath1, filepath2, expectedOutput, format) => {
+    expect(gendiff(filepath1, filepath2, format)).toEqual(expectedOutput);
+  });
 });
-});
-
-
