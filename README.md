@@ -1,66 +1,31 @@
 ### Hexlet tests and linter status:
-[![Actions Status](https://github.com/veyurievna/frontend-project-46/workflows/hexlet-check/badge.svg)](https://github.com/veyurievna/frontend-project-46/actions)
+[![Actions Status](https://github.com/JokOut/frontend-project-46/workflows/hexlet-check/badge.svg)](https://github.com/veyurievna/frontend-project-46/actions)
+[![Actions Status](https://github.com/JokOut/frontend-project-46/workflows/.github/workflows/genDiff.yml/badge.svg)](https://github.com/veyurievna/frontend-project-46/actions)
+[![Maintainability](https://api.codeclimate.com/v1/badges/5d6980f03405c43a629f/maintainability)](https://codeclimate.com/github/veyurievna/frontend-project-46/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/5d6980f03405c43a629f/test_coverage)](https://codeclimate.com/github/veyurievna/frontend-project-46/test_coverage)
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/4107b0d042f321bbe78d/maintainability)](https://codeclimate.com/github/veyurievna/frontend-project-46/maintainability)
 
-[![Test Coverage](https://api.codeclimate.com/v1/badges/4107b0d042f321bbe78d/test_coverage)](https://codeclimate.com/github/veyurievna/frontend-project-46/test_coverage)
-***
+# gendiff.js
+The gendiff application is designed to display the differences between ".json" and ".yml" files in various formats.
 
-# Difference Generator
-
-## **Description:**
-Gendiff is a utility compares two configuration files and shows a difference.
-
-## **How it works:**
-The program defines a difference between structures of two files. Accepted extentions for input are yaml and json. Output formats are plain, JSON and stylish as default. For help type:
-```bash
-gendiff -h
+# Installation
+To install "genDiff.js" locally:
+```
+    git clone https://github.com/veyurievna/frontend-project-46.git
+    make install
 ```
 
-## **Sistem requirements:**
+# Examples
 
-  ***Ubuntu Linux,***
-  ***Node.js v18.0.0***
+**Comparison of JSON & YAML plain files**
+[![asciicast](https://asciinema.org/a/FR8AMsa9ihPlIbwbqOSGZPLFk.svg)](https://asciinema.org/a/FR8AMsa9ihPlIbwbqOSGZPLFk)
+[![asciicast](https://asciinema.org/a/uIT6069pkgrbEgUnPCOUmdW87.svg)](https://asciinema.org/a/uIT6069pkgrbEgUnPCOUmdW87)
 
-## **Installation:**
-1. Clone the project
-2. Install dependencies
+**Comparison of JSON & YAML nested files**
+[![asciicast](https://asciinema.org/a/vjVeqoTcnOzmC4RjcOYeDQuu4.svg)](https://asciinema.org/a/vjVeqoTcnOzmC4RjcOYeDQuu4)
 
-```bash
- npm ci,
- ```
- or
- ```bash
- make install
- ```
- ### **Usage:**
-```
-Usage: gendiff [options] <filepath1> <filepath2>
+**Comparison of JSON & YAML nested files in 'plain'**
+[![asciicast](https://asciinema.org/a/8BXPXD5MqdWfLCLy2yhMpU7ua.svg)](https://asciinema.org/a/8BXPXD5MqdWfLCLy2yhMpU7ua)
 
-Compares two configuration files and shows a difference.
-
-Options:
-  -V, --version        output the version number
-  -f, --format <type>  output format (default: "stylish")
-  -h, --help           display help for command
-```
-
-# Example:
-
-  ## _Simple:_
-
-https://asciinema.org/a/ddEVlKZP6zVk0Mkpgddw3vFH1
-
-
-  ## _Stylish:_
-
- https://asciinema.org/a/lHDTQpcTx0slQfoYO3iD1R99W
-
- 
-  ## _Plain:_
-
- https://asciinema.org/a/gmiPAoU1g1EIE9bKDKjtRaTow
-
-  ## _JSON:_
-
- https://asciinema.org/a/9oNgQVFwHdIQ09uy8CNruySNH
+**Comparison of JSON & YAML nested files in 'json'**
+[![asciicast](https://asciinema.org/a/BlZUcs3M175uu2jpE8ajRHP5y.svg)](https://asciinema.org/a/BlZUcs3M175uu2jpE8ajRHP5y)

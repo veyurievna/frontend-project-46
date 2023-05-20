@@ -1,25 +1,14 @@
 install:
 	npm ci
 
-test:
-	npm test
-
-test-coverage:
-	npm test -- --coverage --coverageProvider=v8
-
-lint:
-	npx eslint .	
-
-fix:
-	npx eslint . --fix
-
 publish:
 	npm publish --dry-run
 
-run:
-	gendiff  './fixtures/file1.yml' './fixtures/file2.yml' 
+lint:
+	npx eslint .
 
-run2:
-	gendiff  './fixtures/file1.json' './fixtures/file2.json' 
+test:
+	npx jest
 
-.PHONY: test
+test-coverage:
+	npx jest --coverage

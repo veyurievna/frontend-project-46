@@ -1,18 +1,15 @@
-import formatStylish from './stylish.js';
-import plainStylish from './plain.js';
+import stylish from './stylish.js';
+import plain from './plain.js';
 
-const formatter = (tree, formatName) => {
-  switch (formatName) {
+export default (data, type) => {
+  switch (type) {
     case 'stylish':
-      return formatStylish(tree);
+      return stylish(data);
     case 'plain':
-      return plainStylish(tree);
+      return plain(data);
     case 'json':
-      return JSON.stringify(tree);
+      return JSON.stringify(data);
     default:
-      throw new Error(
-        `The ${formatName} format is supported.\n supported fornmats: stylish, plain, json`,
-      );
+      return stylish(data);
   }
 };
-export default formatter;
