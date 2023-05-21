@@ -1,15 +1,9 @@
 import stylish from './stylish.js';
 import plain from './plain.js';
 
-export default (data, type) => {
-  switch (type) {
-    case 'stylish':
-      return stylish(data);
-    case 'plain':
-      return plain(data);
-    case 'json':
-      return JSON.stringify(data);
-    default:
-      return stylish(data);
-  }
+export default (diff, format = 'stylish') => {
+  const formatters = { stylish, plain, json: JSON.stringify };
+  const formatter = formatters[format];
+
+  return formatter(diff);
 };

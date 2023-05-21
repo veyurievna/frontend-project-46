@@ -16,23 +16,25 @@ const getValue = (node, depth) => {
 const stylish = (data, depth = 1) => {
   const indent = getIndent(depth).slice(0, getIndent(depth) - 2);
   const bracketEndIndent = getIndent(depth - 1);
-  const lines = data.flatMap((diff) => {
-    switch (diff.type) {
+  const lines = data.flatMap(({
+    type, key, children, value1, value2,
+  }) => {
+    switch (type) {
       case 'nested':
-        return `${indent}  ${diff.key}: ${stylish(diff.children, depth + 1)}`;
+        return `${indent}  ${key}: ${stylish(children, depth + 1)}`;
       case 'added':
-        return `${indent}+ ${diff.key}: ${getValue(diff.value2, depth + 1)}`;
+        return `${indent}+ ${key}: ${getValue(value2, depth + 1)}`;
       case 'deleted':
-        return `${indent}- ${diff.key}: ${getValue(diff.value1, depth + 1)}`;
+        return `${indent}- ${key}: ${getValue(value1, depth + 1)}`;
       case 'unchanged':
-        return `${indent}  ${diff.key}: ${getValue(diff.value1, depth + 1)}`;
+        return `${indent}  ${key}: ${getValue(value1, depth + 1)}`;
       case 'changed':
         return [
-          `${indent}- ${diff.key}: ${getValue(diff.value1, depth + 1)}`,
-          `${indent}+ ${diff.key}: ${getValue(diff.value2, depth + 1)}`,
+          `${indent}- ${key}: ${getValue(value1, depth + 1)}`,
+          `${indent}+ ${key}: ${getValue(value2, depth + 1)}`,
         ];
       default:
-        throw new Error(`Unknown type of data: ${diff.type}`);
+        throw new Error(`Unknown type of data: ${type}`);
     }
   });
   return ['{', ...lines, `${bracketEndIndent}}`].join('\n');
