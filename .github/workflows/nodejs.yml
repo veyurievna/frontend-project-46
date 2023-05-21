@@ -18,7 +18,7 @@ jobs:
     strategy:
       # Node versions list
       matrix:
-        node-version: [19.x]
+        node-version: [18.x]
 
     steps:
         # Check-out repository under GitHub workspace
@@ -46,3 +46,4 @@ jobs:
         with:
           coverageCommand: make test-coverage
           debug: true
+          
