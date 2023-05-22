@@ -3,7 +3,7 @@
 [![GitHub Actions Demo](https://github.com/veyurievna/frontend-project-46/actions/workflows/github-actions-demo.yml/badge.svg)](https://github.com/veyurievna/frontend-project-46/actions/workflows/github-actions-demo.yml)
 [![Maintainability](https://api.codeclimate.com/v1/badges/5d6980f03405c43a629f/maintainability)](https://codeclimate.com/github/veyurievna/frontend-project-46/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/5d6980f03405c43a629f/test_coverage)](https://codeclimate.com/github/veyurievna/frontend-project-46/test_coverage)
-
+[![Node CI](https://github.com/hexlet-boilerplates/nodejs-package/workflows/Node%20CI/badge.svg)](https://github.com/hexlet-boilerplates/nodejs-package/actions)
 
 # gendiff.js
 The gendiff application is designed to display the differences between ".json" and ".yml" files in various formats.
