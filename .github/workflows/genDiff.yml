@@ -38,7 +38,7 @@ jobs:
       - run: make test
       - name: Test & publish code coverage
          # Publish code coverage on Code Climate
-         # https://github.com/veyurievna/codeclimate-action
+         # https://github.com/paambaati/codeclimate-action
         uses: paambaati/codeclimate-action@v4.0.0
          # Add Code Climate secret key
         env:
